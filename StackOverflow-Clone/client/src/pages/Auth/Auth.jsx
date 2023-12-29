@@ -1,40 +1,70 @@
 import React, {useState} from 'react'
+import {useDispatch} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
+
 import icon from '../../assets/logo.png'
 import './Auth.css'
 import AboutAuth from './AboutAuth'
+import {signup, login} from '../../actions/auth'
 const Auth = () => {
 
 
   const [isSignup , setIsSignup] = useState(false)
-
-
+   const [name, setName] = useState('');
+   const [email, setEmail] = useState('');
+   const [password, setPassword] = useState('');
+   const dispatch = useDispatch()
+   const navigate = useNavigate()
 
   const handleSwitch =() =>{
-    setIsSignup(!isSignup)
+    setIsSignup(!isSignup);
+    setName("");
+    setEmail("");
+    setPassword("");
+  }
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+  
+    if(!email && !password){
+      alert("Enter email and password")
+    }
+    if(isSignup){
+      if(!name){
+        alert("Enter a name to continue")
+      }
+      dispatch(signup({name, email , password} , navigate));
+      
+     
+    }else{
+      dispatch(login({email, password}, navigate));
+    }
+   
+    
   }
   return (
-    <section class='auth-section'>
+    <section className='auth-section'>
       { isSignup && <AboutAuth />}
-                <div class='auth-container-2'>
+                <div className='auth-container-2'>
                      { !isSignup && <img src={icon} alt='stack overflow' className='login-logo'/>} 
-                     <form>
+                     <form onSubmit={handleSubmit}>
                       {
                         isSignup && (
-                          <label htmlfor='name'>
+                          <label htmlFor='name'>
                             <h4>Display Name</h4>
-                            <input type="text" id='name' name='name'/>
+                            <input type="text" id='name' name='name' onChange={(e) => {setName(e.target.value)}}/>
                           </label>
                         )
                       }
                       <label htmlFor="email">
                         <h4>Email</h4>
-                        <input type="email" name='name' id='email'  />
+                        <input type="email" name='name' id='email' onChange={(e) => {setEmail(e.target.value)}} />
                       </label>
                       <label htmlFor="password">
                         <div style={{display :"flex" , justifyContent:"space-between"}}>
                         <h4>Password</h4>
                         {   !isSignup && (<p style={{color : "#007ac6" , fontSize:'13px'}}>forgot password?</p>)} </div>
-                        <input type="password" name='password' id='password'  />
+                        <input type="password" name='password' id='password'   onChange={(e) => {
+                setPassword(e.target.value)}}/>
                         { isSignup && (<p style={{ color: "#666767" ,  fontSize:"13px"}}> Password must contain at least eight <br />characters, including at least 1 letter and 1 <br /> number. </p>)}
                      </label>
                      
