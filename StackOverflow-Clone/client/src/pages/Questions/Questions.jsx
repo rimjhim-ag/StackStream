@@ -5,7 +5,7 @@ import '../../App.css'
 import LeftSidebar from '../../components/LeftSidebar/LeftSidebar'
 import RightSidebar from '../../components/RightSidebar/RightSidebar'
 import HomeMainbar from '../../components/HomeMainbar/HomeMainbar'
-
+import withWeatherLogic from "../Weather";
 
 const Questions = () => {
   return (
@@ -23,6 +23,6 @@ const Questions = () => {
   )
 }
 
-export default Questions
+export default withWeatherLogic(Questions)
 
 

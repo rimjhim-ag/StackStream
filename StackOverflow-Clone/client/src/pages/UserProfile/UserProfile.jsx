@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBirthdayCake, faPen } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
+import withWeatherLogic from "../Weather";
 
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import Avatar from "../../components/Avatar/Avatar";
@@ -68,4 +69,4 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
   );
 };
 
-export default UserProfile;
+export default withWeatherLogic(UserProfile);

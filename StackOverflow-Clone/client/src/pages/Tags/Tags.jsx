@@ -3,6 +3,7 @@ import React from "react";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import TagsList from "./TagsList";
 import "./Tags.css";
+import withWeatherLogic from "../Weather";
 
 // import { tagsList } from "./tagList";
 
@@ -85,4 +86,4 @@ const Tags = ({ slideIn, handleSlideIn }) => {
   );
 };
 
-export default Tags;
+export default withWeatherLogic(Tags);

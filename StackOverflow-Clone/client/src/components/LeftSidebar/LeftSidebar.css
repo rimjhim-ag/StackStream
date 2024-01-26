@@ -51,6 +51,21 @@
 }
 
 
+@media screen and (max-width: 600px) {
+    .left-sidebar {
+      position: absolute;
+      transform: translateX(-100%);
+    }
+    .menu_open img {
+      opacity: 0.7;
+    }
+  
+    #check:checked ~ .left-sidebar {
+      transform: translateX(0);
+      position: fixed;
+    }
+  }
+
 
 
 

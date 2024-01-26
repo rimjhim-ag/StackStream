@@ -1,4 +1,5 @@
 import React from "react";
+import withWeatherLogic from "../Weather";
 
 const ProfileBio = ({ currentProfile }) => {
   return (
@@ -29,4 +30,4 @@ const ProfileBio = ({ currentProfile }) => {
   );
 };
 
-export default ProfileBio;
+export default withWeatherLogic(ProfileBio);

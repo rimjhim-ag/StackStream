@@ -1,13 +1,16 @@
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
+import withWeatherLogic from "../Weather";
 
 import icon from '../../assets/logo.png'
 import './Auth.css'
 import AboutAuth from './AboutAuth'
 import {signup, login} from '../../actions/auth'
-const Auth = () => {
 
+
+const Auth = (props) => {
+  console.log('Auth component', props);
 
   const [isSignup , setIsSignup] = useState(false)
    const [name, setName] = useState('');
@@ -42,6 +45,7 @@ const Auth = () => {
     
   }
   return (
+    <div>
     <section className='auth-section'>
       { isSignup && <AboutAuth />}
                 <div className='auth-container-2'>
@@ -94,7 +98,9 @@ const Auth = () => {
                      
                 </div>
     </section>
-  )
-}
+    </div>
+    
+  );
+};
 
-export default Auth
+export default withWeatherLogic(Auth);

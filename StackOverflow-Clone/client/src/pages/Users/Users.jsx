@@ -1,5 +1,5 @@
 import React from "react";
-
+import withWeatherLogic from "../Weather";
 import "./Users.css";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import UsersList from "./UsersList";
@@ -16,4 +16,4 @@ const Users = ({ slideIn, handleSlideIn }) => {
   );
 };
 
-export default Users;
+export default withWeatherLogic(Users);
