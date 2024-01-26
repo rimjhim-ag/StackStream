@@ -15,7 +15,7 @@ const withWeatherLogic = (WrappedComponent) => {
             setUserLocation({ latitude, longitude });
 
             const apiKey = '74c92d48ebab9ea710fde44587ca575c'; 
-            const weatherResponse = await axios.get(`http://api.openweathermap.org/data/2.5/weather`, {
+            const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather`, {
               params: {
                 lat: latitude,
                 lon: longitude,
@@ -48,7 +48,7 @@ const withWeatherLogic = (WrappedComponent) => {
       <div style={themeStyle}>
         {loading ? (
           
-          <div>Loading weather data...</div>
+          <div>Loading ...</div>
         ) : (
           <WrappedComponent {...props} />
         )}
