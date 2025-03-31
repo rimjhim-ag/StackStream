@@ -12,4 +12,4 @@ const TagsList = ({tag}) => {
   )
 }
 
-export default withWeatherLogic(TagsList)
+export default TagsList
