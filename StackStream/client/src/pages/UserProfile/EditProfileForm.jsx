@@ -65,4 +65,4 @@ const EditProfileForm = ({ currentUser, setSwitch }) => {
   );
 };
 
-export default withWeatherLogic(EditProfileForm);
+export default EditProfileForm;
