@@ -2,7 +2,7 @@ import React from 'react'
 import LeftSidebar from '../../components/LeftSidebar/LeftSidebar'
 import RightSidebar from '../../components/RightSidebar/RightSidebar'
 import QuestionDetails from './QuestionDetails'
-import withWeatherLogic from "../Weather";
+
 
 const DisplayQuestion = () => {
   return (
