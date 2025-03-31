@@ -41,8 +41,11 @@ const withWeatherLogic = (WrappedComponent) => {
     }, []);
 
     const themeStyle = {
-      backgroundColor: isDaytimeTheme ? '#FFFFFF' : '#5F4E52',
-    };
+  backgroundColor: isDaytimeTheme ? '#F5F5F5' : '#2D2D2D',
+  color: isDaytimeTheme ? '#333' : '#DDD', // Adjust text color for readability
+  transition: 'background-color 0.5s ease-in-out', // Smooth transition effect
+};
+
 
     return (
       <div style={themeStyle}>
