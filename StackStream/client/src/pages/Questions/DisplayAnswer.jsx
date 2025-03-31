@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import withWeatherLogic from "../Weather";
+
 
 import Avatar from "../../components/Avatar/Avatar";
 import { deleteAnswer } from "../../actions/question";
