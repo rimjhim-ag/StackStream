@@ -23,6 +23,6 @@ const Questions = () => {
   )
 }
 
-export default withWeatherLogic(Questions)
+export default Questions
 
 
