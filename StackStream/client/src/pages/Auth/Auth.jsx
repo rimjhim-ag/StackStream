@@ -103,4 +103,4 @@ const Auth = (props) => {
   );
 };
 
-export default withWeatherLogic(Auth);
+export default Auth;
