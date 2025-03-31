@@ -58,4 +58,4 @@ const DisplayAnswer = ({ question, handleShare }) => {
   );
 };
 
-export default withWeatherLogic(DisplayAnswer);
+export default DisplayAnswer;
