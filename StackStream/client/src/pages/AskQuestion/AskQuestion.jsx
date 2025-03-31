@@ -1,7 +1,7 @@
 import React , {useState} from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import {useNavigate} from 'react-router-dom'
-import withWeatherLogic from "../Weather";
+
 
 import './AskQuestion.css'
 import { askQuestion } from "../../actions/question";
