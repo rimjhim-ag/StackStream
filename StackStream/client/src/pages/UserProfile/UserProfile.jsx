@@ -69,4 +69,4 @@ const UserProfile = ({ slideIn, handleSlideIn }) => {
   );
 };
 
-export default withWeatherLogic(UserProfile);
+export default UserProfile;
