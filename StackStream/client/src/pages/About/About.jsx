@@ -21,4 +21,4 @@ const About = () => {
   );
 };
 
-export default withWeatherLogic(About);
+export default About;
