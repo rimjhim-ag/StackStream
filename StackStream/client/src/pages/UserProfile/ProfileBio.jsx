@@ -1,5 +1,5 @@
 import React from "react";
-import withWeatherLogic from "../Weather";
+
 
 const ProfileBio = ({ currentProfile }) => {
   return (
