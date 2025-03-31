@@ -17,4 +17,4 @@ const DisplayQuestion = () => {
   )
 }
 
-export default withWeatherLogic(DisplayQuestion)
+export default DisplayQuestion
