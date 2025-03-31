@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default withWeatherLogic(Home);
+export default Home;
