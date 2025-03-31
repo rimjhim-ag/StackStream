@@ -86,4 +86,4 @@ const Tags = ({ slideIn, handleSlideIn }) => {
   );
 };
 
-export default withWeatherLogic(Tags);
+export default Tags;
