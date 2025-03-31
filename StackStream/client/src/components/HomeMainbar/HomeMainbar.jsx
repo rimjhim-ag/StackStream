@@ -48,12 +48,14 @@ const HomeMainbar = () => {
       </div>
       <div>
         {questionsList.data === null ? (
-          <h1>Loading...</h1>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+           <>
+    <h1>Loading...</h1>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </>
         ) : (
           <>
             <p>{questionsList.data.length} questions</p>
