@@ -2,7 +2,7 @@ import React from "react";
 import "../../App.css";
 import CustomVideoPlayer from "./CustomVideoPlayer";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
-import withWeatherLogic from "../Weather";
+
 // import { useTheme } from '../../pages/Theme';
 
 
