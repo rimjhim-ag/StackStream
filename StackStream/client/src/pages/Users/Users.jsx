@@ -16,4 +16,4 @@ const Users = ({ slideIn, handleSlideIn }) => {
   );
 };
 
-export default withWeatherLogic(Users);
+export default Users;
