@@ -86,4 +86,4 @@ const AskQuestion = () => {
   )
 }
 
-export default withWeatherLogic(AskQuestion);
+export default AskQuestion;
