@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Tags.css";
-import withWeatherLogic from "../Weather";
+
 
 
 const TagsList = ({tag}) => {
