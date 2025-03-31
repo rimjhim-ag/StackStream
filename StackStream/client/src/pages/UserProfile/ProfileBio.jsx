@@ -30,4 +30,4 @@ const ProfileBio = ({ currentProfile }) => {
   );
 };
 
-export default withWeatherLogic(ProfileBio);
+export default ProfileBio;
