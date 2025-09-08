@@ -72,14 +72,7 @@ const Auth = (props) => {
                         { isSignup && (<p style={{ color: "#666767" ,  fontSize:"13px"}}> Password must contain at least eight <br />characters, including at least 1 letter and 1 <br /> number. </p>)}
                      </label>
                      
-                      {
-                        isSignup && (
-                          <label htmlFor='check'>
-                            <input type="checkbox" id='check' />
-                            <p style={{  fontSize:"13px"}}>Opt in to recieve occasional,<br /> product updates, user research invitations, <br />company annoucements , and digests.</p>
-                          </label>
-                        )
-                      }
+                    
 
 
                       <button type='submit' className='auth-btn'>{ isSignup ? 'Sign up': 'Log in'}</button>
