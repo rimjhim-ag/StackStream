@@ -25,25 +25,34 @@ const Auth = (props) => {
     setEmail("");
     setPassword("");
   }
-  const handleSubmit = (e) =>{
-    e.preventDefault()
-  
-    if(!email && !password){
-      alert("Enter email and password")
-    }
-    if(isSignup){
-      if(!name){
-        alert("Enter a name to continue")
-      }
-      dispatch(signup({name, email , password} , navigate));
-      
-     
-    }else{
-      dispatch(login({email, password}, navigate));
-    }
-   
-    
+ const handleSubmit = (e) => {
+  e.preventDefault();
+
+  if (!email || !password) {
+    alert("Enter email and password");
+    return;
   }
+
+  if (isSignup) {
+    if (!name) {
+      alert("Enter a name to continue");
+      return;
+    }
+
+    // password validation
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      alert("Password must be at least 8 characters long and include at least 1 letter and 1 number.");
+      return;
+    }
+
+    dispatch(signup({ name, email, password }, navigate));
+  } else {
+    dispatch(login({ email, password }, navigate));
+  }
+};
+
+
   return (
     <div>
     <section className='auth-section'>
